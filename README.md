@@ -11,5 +11,6 @@ The user data script installs Apache, PHP, MySQL, and WordPress on the EC2 insta
 
 **Security Group Configuration:**
 The security group is configured to allow incoming traffic on ports 22 for SSH, 80 for HTTP, and 3306 for MySQL.
+
 **Note:**
 The Terraform code for this project is located in the master branch. This main branch only contains the README.
