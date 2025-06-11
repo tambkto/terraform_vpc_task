@@ -4,17 +4,10 @@ This project uses Terraform to provision a complete infrastructure for hosting W
 **Modular Design**: Code is split into reusable modules for vpc and ec2.
 
 **Provisioning:**
-Creates a custom VPC with subnets.
-Launches an EC2 instance inside the VPC.
-Attaches a user data script to configure the EC2 instance.
+Terraform creates a custom VPC with subnets, launches an EC2 instance within that VPC, and attaches a user data script to configure the EC2 instance automatically.
 
 **User Data Script:**
-Installs Apache, PHP, MySQL, and WordPress.
-Creates a MySQL database and user for WordPress.
-Updates the WordPress config file (wp-config.php) with DB credentials.
+The user data script installs Apache, PHP, MySQL, and WordPress on the EC2 instance. It also creates a dedicated MySQL database and user for WordPress, and updates the wp-config.php file with the necessary database credentials.
 
 **Security Group Configuration:**
-Allows incoming traffic on:
-Port 22 (SSH)
-Port 80 (HTTP)
-Port 3306 (MySQL)
+The security group is configured to allow incoming traffic on ports 22 for SSH, 80 for HTTP, and 3306 for MySQL.
